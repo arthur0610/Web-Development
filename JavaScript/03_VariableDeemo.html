@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Variable Deemo</title>
+    </head>
+    <body>
+        <p>The result of "8" + 3 + 5:</p>
+        <p id="test1"></p>
+        <p>The result of 3 + 5 + "8":</p>
+        <p id="test2"></p>
+        <script>
+            var var1 = "8" + 3 + 5;
+            document.getElementById("test1").innerHTML = var1;
+            var var2 = 3 + 5 + "8";
+            document.getElementById("test2").innerHTML = var2;
+        </script>
+    </body>
+</html>

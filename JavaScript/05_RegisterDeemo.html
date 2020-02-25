@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Register JS Deemo</title>
+        <script type="text/javascript" src="JSdemo/regCheck.js"></script>
+    </head>
+    <body>
+        <form onsubmit="return regCheck()" action="Output/register.jsp">
+            <table border="1" width="700px" hight="500px">
+                <tr>
+                    <td colspan="2" aglin="center">Register Page</td>
+                </tr>
+                <tr>
+                    <td align="center">User Name:</td>
+                    <td align="center">
+                        <input type="text" id="userName" onblur="checkUserName(this)">
+                        <font color="red" id="userNameMsg"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">email Address:</td>
+                    <td align="center">
+                        <input type="text" id="emailAdd" onblur="checkEmailAdd(this)">
+                        <font color="red" id="emailAddMsg"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">Password:</td>
+                    <td align="center">
+                        <input type="password" id="pwd" onblur="checkPwdLength(this)">
+                        <font color="red" id="pwdMsg"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">Password Confirm:</td>
+                    <td align="center">
+                        <input type="password" id="pwdConf" onblur="checkPwdConf(this)">
+                        <font color="red" id="pwdConfMsg"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" aglin="center">
+                        <input type="submit" value="submit!">
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </body>
+</html>

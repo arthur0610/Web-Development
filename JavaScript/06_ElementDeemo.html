@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Get Element Deemo</title>
+    </head>
+    <body>
+        <div id="one" class="team2">
+            <span>DOM: Document Object Model</span>
+        </div>
+        <div id="two" class="team2">
+            <span>DOM: Document Object Model</span>
+        </div>
+        <div id="three" class="team2" name="last">
+            <span>DOM: Document Object Model</span>
+        </div>
+        <p id="four" class="team2" name="last">DOM Tree <font id="font1" size="6">DOM Tree</font></p>
+    </body>
+</html>
+
+<script type="text/javascript">
+    <!-- 1.1 getElementById -->
+    var divOne = document.getElementById("one");
+    console.log(divOne);
+
+    <!-- 1.2 getElementsByTagName -->
+    var divs = document.getElementsByTagName("div");
+    console.log(divs);
+
+    var divTwo = document.getElementById("one");
+    var divTwoArr = divOne.getElementsByTagName("span");
+    console.log(divTwoArr);
+
+    <!-- 1.3 getElementsByClassName -->
+    var divThree = document.getElementsByClassName("team2");
+    console.log(divThree);
+
+    <!-- 1.4 getElementsByName -->
+    var divFour = document.getElementsByName("last");
+    console.log(divFour);
+
+    var myFont = document.getElementById("font1");
+    myFont.setAttribute("color","green");
+    var mySize = myFont.getAttribute("size");
+    console.log(typeof(mySize));
+    console.log(mySize);
+
+</script>

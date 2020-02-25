@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>First JS Deemo</title>
+    </head>
+    <body>
+        <button type="button" onclick="document.getElementById('time').innerHTML = Date()"> Click here to show the current time</button>
+        <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click here to set the font size</button>
+        <button type="button" onclick="document.getElementById('demo').style.display='none'">Display:none</button>
+        <button type="button" onclick="document.getElementById('demo').style.display='block'">Display:block</button>
+
+        <p id="time"></p>
+        <p id="demo">Hello World JavaScript</p>
+
+        <br>
+
+        <button type="button" onclick="document.getElementById('bulb').src='i/eg_bulbon.gif'">ON</button>
+        <img id="bulb" border="0" src="i/eg_bulboff.gif" style="text-align:center;">
+        <button type="button" onclick="document.getElementById('bulb').src='i/eg_bulboff.gif'">OFF</button>
+
+    </body>
+</html>
