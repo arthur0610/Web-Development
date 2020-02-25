@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Image Carousel</title>
+    <style type="text/css">
+        div{
+            width:900px;
+            height:400px;
+            margin: 0 auto;
+        }
+        div img{
+            width:400px;
+            height:400px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.setTimeout(changeImg,2000);
+        function changeImg() {
+            myImg = document.getElementById("myImg");
+            myImg.src = "../Image/warcraft_icon2.png";
+        }
+    </script>
+  </head>
+  <body>
+      <div>
+          <img src="../Image/warcraft_icon1.png" id="myImg">
+      </div>
+  </body>
+</html>
