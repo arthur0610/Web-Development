@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Table Deemo</title>
+    </head>
+    <body>
+        <p>
+            <a href="#P1">1. Table without Frame</a>
+            <a href="#P2">2. Table with header</a>
+            <a href="#P3">3. No-breaking space</a>
+            <a href="#P4">4. Table with title</a>
+            <a href="#P5">5. Table with merged row or column</a>
+            <a href="#P6">6. Table with Tags</a>
+            <a href="#P7">7. Table with cell padding</a>
+            <a href="#P8">8. Table with cell spacing</a>
+            <a href="#P9">9. Table with background</a>
+            <a href="#P10">10. Table unit with background</a>
+            <a href="#P11">11. Table with Tag align</a>
+            <a href="#P12">12. Table with Tag frame</a>
+        </p>
+
+        <h2><a name="P1"></a>1. Table without Frame</h2>
+        <p>Example 1</p>
+        <table>
+            <tr>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>500</td>
+                <td>600</td>
+            </tr>
+        </table>
+        <p>Example 2</p>
+        <table border="0">
+            <tr>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>500</td>
+                <td>600</td>
+            </tr>
+        </table>
+
+        <h2><a name="P2"></a>2. Table with header</h2>
+        <p>2.1 horizontal header</p>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Phone 1</th>
+                <th>Phone 2</th>
+            </tr>
+            <tr>
+                <td>Bill Gates</td>
+                <td>555 77 584</td>
+                <td>555 77 854</td>
+            </tr>
+        </table>
+        <p>2.2 vertical header</p>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <td>Bill Gates</td>
+            </tr>
+            <tr>
+                <th>Phone 1</th>
+                <td>555 77 854</td>
+            </tr>
+            <tr>
+                <th>Phone 2</th>
+                <td>555 77 854</td>
+            </tr>
+        </table>
+
+        <h2><a name="P3">3. No-breaking space</a></h2>
+        <p>no-breaking space begins with "&" (AND) opterator,  feed with characters "nbsp", ends with semicolon ";"</p>
+        <table border="1">
+            <tr>
+                <td>Context</td>
+                <td>Context</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Context</td>
+            </tr>
+        </table>
+
+        <h2><a name="P4">4. Table with title</a></h2>
+        <table border="1">
+            <caption>My Table</caption>
+            <tr>
+                <td>Context1</td>
+                <td>Context2</td>
+                <td>Context3</td>
+            </tr>
+            <tr>
+                <td>Context4</td>
+                <td>Context5</td>
+                <td>Context6</td>
+            </tr>
+        </table>
+
+        <h2><a name="P5">5. Table with merged row or column</a></h2>
+        <table border="1">
+            <caption>5.1 Merged column Table</caption>
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Phone</th>
+            </tr>
+            <tr>
+                <td>Bill Gates</td>
+                <td>555 77 584</td>
+                <td>555 77 854</td>
+            </tr>
+        </table>
+
+        <table border="1">
+            <caption>5.2 Mergerd row Tables</caption>
+            <tr>
+                <th>Name</th>
+                <td>Bill Gates</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Phone</th>
+                <td>555 77 854</td>
+            </tr>
+            <tr>
+                <td>555 77 854</td>
+            </tr>
+        </table>
+
+        <h2><a name="P6">6. Table with Tags</a></h2>
+        <table border="1">
+            <caption>Tags Table</caption>
+            <tr>
+                <td>HELLO</td>
+                <td>
+                    <p>This is a paragraph.</p>
+                    <p>This is another paragraph.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>This unit contains another table inside
+                    <table border="1">
+                        <caption>Inside Table</caption>
+                        <tr>
+                            <td>A</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>D</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>This unit contains a list inside
+                    <ul>
+                        <li>apple</li>
+                        <li>banana</li>
+                        <li>pineapple</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <h2><a name="P7">7. Table with cell padding</a></h2>
+        <table border="1" cellpadding="10">
+            <caption>Table with cell padding</caption>
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+
+        <h2><a name="P8">8. Table with cell spacing</a></h2>
+        <table border="1" cellspacing="10">
+            <caption>Table with cell spacing</caption>
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+
+        <h2><a name="P9">9. Table with background</a></h2>
+        <table border="1" bgcolor="red">
+            <caption>Table with single color as background</caption>
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+        <table border="1" background="i/eg_background.jpg">
+            <caption>Table with a gif as background</caption>
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+
+        <h2><a name="P10">10. Table unit with background</a></h2>
+        <table border="2">
+            <caption>Table unit with background</caption>
+            <table>
+                <tr>
+                    <td bgcolor="red">First</td>
+                    <td>Row</td>
+                </tr>
+                <tr>
+                    <td background="i/eg_background.jpg">Second</td>
+                    <td>Row</td>
+                </tr>
+            </table>
+        </table>
+
+        <h2><a name="P11">11. Table with Tag align </a></h2>
+        <table width="400" border="1">
+            <tr>
+                <th align="left">Items</th>
+                <th align="right">Jan</th>
+                <th align="right">Feb</th>
+            </tr>
+            <tr>
+                <td align="left">Clothes</td>
+                <td align="right">$241.10</td>
+                <td align="right">$50.20</td>
+            </tr>
+            <tr>
+                <td align="left">Make up</td>
+                <td align="right">$30.00</td>
+                <td align="right">$44.45</td>
+            </tr>
+            <tr>
+                <td align="left">Food</td>
+                <td align="right">$730.40</td>
+                <td align="right">$650.00</td>
+            </tr>
+            <tr>
+                <td align="left">Total</td>
+                <td align="right">$1001.50</td>
+                <td align="right">$744.65</td>
+            </tr>
+        </table>
+
+        <h2><a name="P12">12. Table with Tag frame</a></h2>
+        <p>12.1 Table with frame="box"</p>
+        <table frame="box">
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+        </table>
+        <p>12.2 Table with frame="above"</p>
+        <table frame="above">
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+        </table>
+        <p>12.3 Table with frame="below"</p>
+        <table frame="below">
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+        </table>
+        <p>12.4 Table with frame="hsides"</p>
+        <table frame="hsides">
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+        </table>
+        <p>12.5 Table with frame="vsides"</p>
+        <table frame="vsides">
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+        </table>
+
+    </body>
+</html>

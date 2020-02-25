@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Input Attribute Deemo</title>
+    </head>
+    <body>
+        <form>
+        <fieldset>
+        <legend>FORM ONE</legend>
+        First name:<br>
+        <input type="text" name="firstname" value="John" readonly disabled size="40"><br>
+        Last name:<br>
+        <input type="text" name="lastname" maxlength="20" form="form1"><br>
+        </fieldset>
+        </form>
+
+        <p>and the following form which belongs to addtional attributes in HTML5</p>
+        <form autocomplete="on" novalidate id="form1">
+        <legend>FORM TWO</legend>
+        <fieldset>
+        First name:<input type="text" name="fname" required="required"><br>
+        Last name: <input type="text" name="lname" autofocus required="required"><br>
+        E-mail: <input type="email" name="email" autocomplete="off" required="required"><br>
+        Browsers: <input list="browsers"><br>
+        <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+        </datalist>
+        Enter a date before 1980-01-01:<input type="date" name="bday" max="1979-12-31"><br>
+        Enter a date after 2000-01-01:<input type="date" name="bday" min="2000-01-02"><br>
+        Quantity (only 0, 3 and 6):<input type="number" name="quantity" min="0" max="6" step="3"><br>
+        Search image:<input type="file" name="image" multiple="multiple"><br>
+        Country code:<input type="text" name="country_code" pattern="[A-Za-Z]{3}" title="Three letter country code" placeholder="Three letter country code"><br>
+
+        <input type="submit" value="Submit"><br>
+        <input type="submit" formaction="" value="Submit as Admin"><br>
+        <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data"><br>
+        <input type="submit" formmethod="post" formaction="" value="Submit using POST"><br>
+        <input type="submit" formnovalidate value="Submit without validation"><br>
+        <input type="submit" formtarget="_blank" value="Submit to a new window"><br>
+        <input type="image" src="i/eg_submit.jpg" alt="Submit" width="32" height="32">
+        </fieldset>
+        </form>
+
+        <p>Input attribute above</p>
+        <ol>
+            <li>name</li>
+            <li>readonly</li>
+            <li>disabled</li>
+            <li>size</li>
+            <li>maxlength</li>
+        </ol><br>
+        <p>additional attribute in HTML5 </p>
+        <ol>
+            <li>autocomplete</li>
+            <li>novalidate</li>
+            <li>autofocus</li>
+            <li>form</li>
+            <ul>
+                <li>Above "Last name" is out of Form 2, but it always be the one of the FROM 2</li>
+            </ul>
+            <li>formaction</li>
+            <li>formenctype</li>
+            <li>formmethod</li>
+            <li>formnovalidate</li>
+            <li>formtarget</li>
+            <li>height&width</li>
+            <ul>
+                <li>have to give the height and width when inserting a image</li>
+            </ul>
+            <li>list</li>
+            <li>min&max</li>
+            <li>multiple</li>
+            <li>pattern</li>
+            <li>placeholder</li>
+            <li>required</li>
+            <li>step</li>
+        </ol>
+    </body>
+</html>

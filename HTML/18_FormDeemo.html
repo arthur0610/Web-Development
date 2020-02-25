@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Form Deemo</title>
+    </head>
+    <body>
+        <form>
+        <fieldset>
+        <legend>Person data</legend>
+        First name:<br>
+        <input type="text" name="firstname"><br>
+        Last name:<br>
+        <input type="text" name="lastname"><br>
+        User name:<br>
+        <input type="text" name="username"><br>
+        User password:<br>
+        <input type="password" name="psw"><br>
+        Gender:<br>
+        <input type="radio" name="gender" value="male" checked>Male<br>
+        <input type="radio" name="gender" value="female">Female<br>
+        Vehicle:<br>
+        <input type="checkbox" name="vehicle" value="bike">Bike<br>
+        <input type="checkbox" name="vehicle" value="car">Car<br>
+        Occupation:<br>
+        <select name="occupation">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="freelancer" selected>Freelancer</option>
+        </select><br>
+        Level:
+        <input type="number" name="level" min="0" max="100" step="10" value="10"><br>
+        <textarea name="message" rows="10" cols="30">
+        The cat was playing in the garden.
+        </textarea><br>
+        <button type="button" onclick="alert('Hello world by html button')">click me!!!</button>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="IE"></option>
+            <option value="Firefox"></option>
+            <option value="Chrome"></option>
+            <option value="Safari"></option>
+        </datalist>
+
+        <input type="submit" value="Submit">
+        </fieldset>
+        </form>
+
+        <ol>
+            <li>Action: ignoring action attribute, the action will set to the current page</li>
+            <li>Method: GET and POST</li>
+            <ul>
+                <li>GET: form data is visible in the page address no include sensitive data(password etc.)</li>
+                <li>POST: form data is invisible in the page include sensitive data more safe</li>
+            </ul>
+            <li>Name: each input field should have a name property if it is to be submited corretly</li>
+            <li>Fieldset: combining fileds data</li>
+        </ol>
+
+    </body>
+</html>

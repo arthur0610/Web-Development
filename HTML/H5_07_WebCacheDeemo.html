@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Web Cache Deemo</title>
+        <script type="text/javascript">
+            function clickCounterLocalStorage() {
+                if(typeof(Storage) !== "underfined") {
+                    if(localStorage.clickcount) {
+                        localStorage.clickcount = Number(localStorage.clickcount)+1;
+                    } else {
+                        localStorage.clickcount=1;
+                    }
+                    document.getElementById("result1").innerHTML="You already clicked this button" + localStorage.clickcount + " times.";
+                } else {
+                    document.getElementById("result1").innerHTML="Sorry. Your browser doesn't support web storage";
+                }
+            }
+
+            function clickCounterSessionStorage() {
+                if(typeof(Storage) !== "underfined") {
+                    if(sessionStorage.clickcount) {
+                        sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                    } else {
+                        sessionStorage.clickcount=1;
+                    }
+                    document.getElementById("result2").innerHTML="You already clicked this button" + sessionStorage.clickcount + " times.";
+                } else {
+                    document.getElementById("result2").innerHTML="Sorry. Your browser doesn't support web storage";
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <p>
+            <button type="button" onclick="clickCounterLocalStorage()">Click it!</button>
+            <button type="button" onclick="clickCounterSessionStorage()">Click it!</button>
+            <button type="button" onclick="resetCounter()">Reset</button>
+        </p>
+        <div id="result1"></div>
+        <div id="result2"></div>
+        <div id="resetMessage"></div>
+        <p>Please click the button above that shows that times you already clicked</p>
+    </body>
+</html>

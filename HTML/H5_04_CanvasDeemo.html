@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Canvas Deemo</title>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="300" height="300" style="border:1px solid #c3c3c3;">
+        Your browser does not suppert the canvas element
+        </canvas>
+        <script type="text/javascript">
+        var c=document.getElementById("myCanvas");
+        var cxt=c.getContext("2d");
+        cxt.moveTo(10,10);
+        cxt.lineTo(200,50);
+        cxt.lineTo(10,90);
+        cxt.stroke();
+
+        var d=document.getElementById("myCanvas");
+        var dxt=d.getContext("2d");
+        dxt.fillStyle="FF0000";
+        dxt.beginPath();
+        dxt.arc(200,50,15,0,Math.PI*2,true);
+        dxt.closePath();
+        dxt.fill();
+
+        var r=document.getElementById("myCanvas");
+        var rxt=r.getContext("2d");
+        var grd=rxt.createLinearGradient(20,100,155,150);
+        grd.addColorStop(0,"#FF0000");
+        grd.addColorStop(1,"#00FF00");
+        rxt.fillStyle=grd;
+        rxt.fillRect(20,100,155,150);
+
+        var i=document.getElementById("myCanvas");
+        var ixt=i.getContext("2d");
+        var img=new Image()
+        img.src="i/eg_mouse.jpg"
+        ixt.drawImage(img,0,0);
+        </script>
+    </body>
+</html>

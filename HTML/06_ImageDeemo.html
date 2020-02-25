@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Image Deemo</title>
+    </head>
+    <body background="i/eg_background.jpg">
+        <p>1. png: <img src="i/7_512px_icon.png" width="128" heigth="128" /></p>
+
+        <p>2. gif: <img src="i/eg_cute.gif" width="50" height="50" /></p>
+
+        <p>3. image from a website <img src="http://www.w3school.com.cn/i/w3school_logo_white.gif" alt="w3school logo"/></p>
+
+        <p>3.1 background image from a website <img src="http://www.w3school.com.cn/i/eg_background.jpg" alt="background"/>(<-- Background right here)</p>
+
+        <h2>4. width&heigth property</h2>
+        <p>4.1 png <img src="i/7_512px_icon.png" width="64" heigth="64" /></p>
+        <p>4.2 png <img src="i/7_512px_icon.png" width="128" heigth="128" /></p>
+        <p>4.3 png <img src="i/7_512px_icon.png" width="256" heigth="256" /></p>
+
+        <h2>5. align property</h2>
+        <p>5.1 image(not set) <img src="i/eg_cute.gif" width="50" height="50" /></p>
+        <p>5.2 image set bottom <img src="i/eg_cute.gif" width="50" height="50" align="bottom" /></p>
+        <p>5.3 image set middle <img src="i/eg_cute.gif" width="50" height="50" align="middle" /></p>
+        <p>5.4 image set top <img src="i/eg_cute.gif" width="50" height="50" align="top" /></p>
+
+        <h2>6. alt property</h2>
+        <p>6.1 image works <img src="i/eg_goleft.gif" width="64" heigth="64" alt="turn left" /></p>
+        <p>6.2 image doesn't work <img src="i/eg_goleft123.gif" width="128" heigth="128" alt="turn left" /></p>
+
+        <h2>7. map property</h2>
+        <p>check the planet in the map</p>
+        <img src="i/planets/eg_planets.jpg" border="0" usemap="#planetmap" alt="Planets" />
+        <map name="planetmap" id="planetmap">
+            <area shape="circle" coords="180,139,14" href="i/planets/eg_venus.gif" target="_blank" alt="venus" />
+            <area shape="circle" coords="129,161,10" href="i/planets/eg_merglobe.gif" target="_blank" alt="merglobe.gif" />
+            <area shape="rect" coords="0,0,110,260" href="i/planets/eg_sun.gif" target="_blank" alt="sun" />
+        </map>
+
+    </body>
+</html>
