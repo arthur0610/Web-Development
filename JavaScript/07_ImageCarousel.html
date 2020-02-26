@@ -15,16 +15,48 @@
         }
     </style>
     <script type="text/javascript">
-        window.setTimeout(changeImg,2000);
+        function init() {
+            // window.setTimeout(changeImg,2000);
+            window.setInterval(changeImg,2000);
+        }
+
+        var imageCounter = 1;
+
         function changeImg() {
             myImg = document.getElementById("myImg");
-            myImg.src = "../Image/warcraft_icon2.png";
+            imageCounter++;
+            if(imageCounter > 2) {
+                imageCounter = 1;
+            }
+            myImg.src = "../Image/warcraft_icon"+imageCounter+".png";
+        }
+
+        function preImg() {
+            myImg = document.getElementById("myImg");
+            imageCounter--;
+            if(imageCounter < 1) {
+                imageCounter = 2;
+            }
+            myImg.src = "../Image/warcraft_icon"+imageCounter+".png";
+        }
+
+        function nextImg() {
+            myImg = document.getElementById("myImg");
+            imageCounter++;
+            if(imageCounter > 2) {
+                imageCounter = 1;
+            }
+            myImg.src = "../Image/warcraft_icon"+imageCounter+".png";
         }
     </script>
   </head>
-  <body>
+  <body onload="init()">
       <div>
           <img src="../Image/warcraft_icon1.png" id="myImg">
       </div>
+      <p align="center">
+          <button type="button" onclick="preImg()">Previous Page</button>
+          <button type="button" onclick="nextImg()">Next Page</button>
+      </p>
   </body>
 </html>
