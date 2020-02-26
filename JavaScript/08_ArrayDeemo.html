@@ -4,19 +4,43 @@
         <meta charset="utf-8">
         <title>Array Deemo</title>
         <script type="text/javascript">
-            var array = new Array();
-            array[0] = 100;
-            array[1] = 80;
-            array[2] = 70;
-            array[3] = 90;
-            array[4] = 60;
-            array[6] = 50;
+            var array1 = new Array();
+            array1[0] = 100;
+            array1[1] = 80;
+            array1[2] = 70;
+            array1[3] = 90;
+            array1[4] = 60;
+            array1[6] = 50;
 
-            console.log(array[5]);
-            console.log(array.length);
+            console.log(array1[5]);
+            console.log(array1.length);
 
-            for(var i = 0; i < array.length; i++) {
-                console.log(array[i]);
+            for(var i = 0; i < array1.length; i++) {
+                console.log(array1[i]);
+            }
+
+            var array2 = new Array(10);
+            for(var i = 0; i < array2.length; i++) {
+                console.log(array2[i]);
+            }
+
+            var array3 = new Array(100, 10, 200, 20);
+            for(var i = 0; i < array3.length; i++) {
+                console.log(array3[i]);
+            }
+
+            function user(name, age, sex) {
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            user1 = new user("Chika", 15, "female");
+            user2 = new user("Mary", 20, "female");
+            user3 = new user("Bob", 19, "male");
+
+            var array4 = new Array(user1, user2, user3);
+            for(var i = 0; i < array4.length; i++) {
+                console.log(array4[i].name);
             }
 
         </script>
