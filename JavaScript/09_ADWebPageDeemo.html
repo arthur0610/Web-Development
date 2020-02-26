@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AD embedded Web Page Deemo</title>
+    <style type="text/css">
+        #ad {
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        function init() {
+            setTimeout(showAD, 2000);
+        }
+        function showAD() {
+            var ad = document.getElementById("ad");
+            ad.style.display="block";
+        }
+        function closeAD() {
+            var ad = document.getElementById("ad");
+            ad.style.display="none";
+        }
+    </script>
+  </head>
+  <body onload="init()">
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <div id="ad">
+        <button type="button" onclick="closeAD()"></button>
+     </div>
+  </body>
+</html>
