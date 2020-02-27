@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Multi-level Selection Deemo</title>
+        <script type="text/javascript">
+            var statesArr = new Array(5);
+            statesArr[0] = new Array("Greater Sydney", "Newcastle and Lake Macquarie", "Illawarra", "	Hunter Valley excluding Newcastle", "	Richmond Tweed", "Capital region", "Mid North Coast", "Central West", "New England and North West", "Riverina", "Southern Highlands and Shoalhaven", "Coffs Harbour-Grafton", "Far West and Orana", "Murray");
+            statesArr[1] = new Array("Ararat", "Bendigo", "Hamilton", "Melbourne", "Shepparton", "Torquay", "Wodonga", "Ballarat", "Colac", "Horsham", "Mildura", "Swan Hill", "Wangaratta", "Bairnsdale", "Echuca", "Geelong", "Portland", "Traralgon", "Warrnambool");
+            statesArr[2] = new Array("Perth", "other place in WA");
+            statesArr[3] = new Array("Brisbane", "Mackay", "Cairns", "Townsville");
+            statesArr[4] = new Array("Adelaide");
+            statesArr[5] = new Array("Hobart", "Launceston", "Devonport", "Strahan");
+
+            function selectState(state) {
+                window.console.log(statesArr[state.value]);
+
+                var city = window.document.getElementById("city");
+                if(city.value == "-1") {
+                    city.innerHTML = "<option value="-1">Select City</option>";
+                    return;
+                }
+                var cityArr = statesArr[state.value];
+                // clean all city options from last choice  before selecting new state
+                city.options.length = 0;
+                for(var i = 0; i < cityArr.length; i++) {
+                    var cityOptions = window.document.createElement("option");
+                    cityOptions.innerText = cityArr[i];
+                    city.appendChild(cityOptions);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <select onchange="selectState(this)">
+            <option value="-1">Select State</option>
+            <option value="0">New South Wales</option>
+            <option value="1">Victoria</option>
+            <option value="2">Western Australia</option>
+            <option value="3">Queensland</option>
+            <option value="4">South Austrialia</option>
+            <option value="5">Tasmania</option>
+        </select>
+        <select id="city">
+            <option value="-1">Select City</option>
+        </select>
+    </body>
+</html>
