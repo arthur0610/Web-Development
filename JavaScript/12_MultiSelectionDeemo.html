@@ -16,8 +16,9 @@
                 window.console.log(statesArr[state.value]);
 
                 var city = window.document.getElementById("city");
-                if(city.value == "-1") {
-                    city.innerHTML = "<option value="-1">Select City</option>";
+                // check state value equals to -1 
+                if(state.value == "-1") {
+                    city.innerHTML = "<option value='-1'>Select City</option>";
                     return;
                 }
                 var cityArr = statesArr[state.value];
@@ -42,7 +43,7 @@
             <option value="5">Tasmania</option>
         </select>
         <select id="city">
-            <option value="-1">Select City</option>
+            <option value="-1">Select State</option>
         </select>
     </body>
 </html>
