@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Select All Deemo</title>
+        <script type="text/javascript">
+            function selectAll(choiceBtn) {
+                var choiceArr = window.document.getElementsByName("choice");
+                for(var i = 0; i < choiceArr.length; i++) {
+                    choiceArr[i].checked = choiceBtn.checked;
+                }
+            }
+        </script>
+    </head>
+    <body>
+      <table border="1" width="800px" height="800px">
+          <tr>
+              <td>Select</td><td>Username</td><td>Email Address</td><td>Phone Number</td><td>Gender</td><td>Option</td>
+          </tr>
+          <tr>
+              <td><input type="checkbox" name="choice"></td><td>chika</td><td>chika@chika.com</td><td>412356789</td><td>female</td><td>Option 1, Option 2, Option 3</td>
+          </tr>
+          <tr>
+              <td><input type="checkbox" name="choice"></td><td>chika</td><td>chika@chika.com</td><td>412356789</td><td>female</td><td>Option 1, Option 2, Option 3</td>
+          </tr>
+          <tr>
+              <td><input type="checkbox" name="choice"></td><td>chika</td><td>chika@chika.com</td><td>412356789</td><td>female</td><td>Option 1, Option 2, Option 3</td>
+          </tr>
+          <tr>
+              <td><input type="checkbox" name="choice"></td><td>chika</td><td>chika@chika.com</td><td>412356789</td><td>female</td><td>Option 1, Option 2, Option 3</td>
+          </tr>
+          <tr>
+              <td><input type="checkbox" name="choice"></td><td>chika</td><td>chika@chika.com</td><td>412356789</td><td>female</td><td>Option 1, Option 2, Option 3</td>
+          </tr
+          <tr>
+              <td><input type="checkbox" onclick="selectAll(this)" >Select All</td>
+          </tr>
+      </table>
+    </body>
+</html>
