@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery Object vs DOM</title>
+        <script type="text/javascript" src="../src/jquery-3.4.1.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                //DOM Object
+                //var div = window.document.getElementById("chika");
+                //div.innerText="DOM Object";
+                //window.document.getElementById("chika").innerText="DOM Object";
+
+                $("#chika").text("JQuery Object");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="chika">
+            Category: Selectors
+        </div>
+    </body>
+</html>
