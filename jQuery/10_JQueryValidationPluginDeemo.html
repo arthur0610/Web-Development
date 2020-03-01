@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery Validation Plugin Deemo</title>
+        <script type="text/javascript" src="../src/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="../src/jquery.validate.js"></script>
+        <!-- <script type="text/javascript" src="../src/messages_zh.js"></script> -->
+        <style src="text/css"></style>
+        <script type="text/javascript">
+            var validateRule = {
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 8
+                    },
+                    emailAdd: {
+                        required: true,
+                        email: true
+                    },
+                    pwd: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 8
+                    },
+                    pwdConf: {
+                        required: true,
+                        equalTo: "[name='pwd']"
+                    },
+                    dob: {
+                        date: true
+                    },
+                    gender: {
+                        required: true
+                    }
+                },
+                messages: {
+                    username: {
+                        required: "Username is required",
+                        minlength: "Usernamge should be longer than 3 char",
+                        maxlength: "Username should be shorter than 8 char"
+                    }
+                }
+            };
+
+            $(function() {
+                $("#registerForm").validate(validateRule);
+            });
+        </script>
+    </head>
+    <body>
+        <form id="registerForm">
+            <table border="1" width="800px" hight="800px">
+                <tr>
+                    <td colspan="2" aglin="center">Register Page</td>
+                </tr>
+                <tr>
+                    <td align="center">User Name:</td>
+                    <td align="left">
+                        <input type="text" name="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">email Address:</td>
+                    <td align="left">
+                        <input type="text" name="emailAdd">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">Password:</td>
+                    <td align="left">
+                        <input type="password" name="pwd">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">Password Confirm:</td>
+                    <td align="left">
+                        <input type="password" name="pwdConf">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">Day of Birth</td>
+                    <td align="left">
+                        <input type="text" name="dob">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">Gender:</td>
+                    <td>
+                        <input type="radio" name="gender">Male
+                        <input type="radio" name="gender">Female
+                        <label for="gender" class="error"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="submit!">
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+
+
+    </body>
+</html>
